@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Krishna Computer Education, Pandesara, Surat offers practical computer courses including Basic Computer, Advanced Excel, Tally Prime with GST, Graphic Design, ADCA and AI Tools.">
+  <meta name="theme-color" content="#101820">
+  <title>Krishna Computer Education | Pandesara, Surat</title>
+  <style>
+    :root{--ink:#101820;--orange:#ff7a00;--green:#159447;--paper:#f7f8fa;--muted:#5b6570;--white:#fff}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+    a{color:inherit;text-decoration:none}
+    button,input,select,textarea{font:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    .topbar{background:var(--ink);color:#fff;font-size:.9rem;padding:8px 0}
+    .topbar .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    header{position:sticky;top:0;z-index:10;background:#fff;box-shadow:0 2px 14px #10182012}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;line-height:1.15}
+    .logo-mark{display:grid;place-items:center;width:46px;height:46px;border-radius:12px;background:var(--ink);color:#fff;border-bottom:4px solid var(--orange);font-size:1rem}
+    .brand small{display:block;color:var(--green);font-size:.75rem;letter-spacing:.08em;margin-top:4px}
+    nav{display:flex;gap:22px;align-items:center}
+    nav a{font-weight:700;font-size:.92rem}
+    nav a:hover{color:var(--orange)}
+    .menu-btn{display:none;border:0;background:var(--ink);color:#fff;padding:9px 12px;border-radius:8px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:9px;padding:12px 18px;font-weight:800;cursor:pointer;transition:.2s}
+    .btn-orange{background:var(--orange);color:#fff}.btn-orange:hover{background:#e56b00;transform:translateY(-1px)}
+    .btn-dark{background:var(--ink);color:#fff}.btn-dark:hover{background:#273746}
+    .hero{background:linear-gradient(115deg,#101820 0%,#172b36 66%,#116a42 100%);color:#fff;padding:78px 0 70px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:44px}
+    .eyebrow{display:inline-block;color:#fff;background:#ffffff18;border:1px solid #ffffff35;border-radius:30px;padding:6px 13px;font-size:.82rem;font-weight:700;letter-spacing:.04em}
+    h1{font-size:clamp(2.3rem,5vw,4rem);line-height:1.1;margin:18px 0}
+    h1 span{color:#ff9b42}
+    .hero p{color:#e5edf0;max-width:620px;font-size:1.08rem}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+    .hero-note{font-size:.86rem!important;margin-top:18px;color:#d4e0e4!important}
+    .hero-card{background:#fff;color:var(--ink);padding:26px;border-radius:22px;box-shadow:0 24px 60px #0003;transform:rotate(1deg)}
+    .hero-card h2{font-size:1.45rem;margin-bottom:8px}
+    .hero-card p{color:var(--muted);font-size:.95rem}
+    .quick-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+    .quick-item{background:var(--paper);border-radius:12px;padding:14px;font-weight:700}
+    .quick-item span{display:block;font-size:1.35rem;margin-bottom:5px}
+    section{padding:72px 0}
+    .section-head{text-align:center;max-width:700px;margin:0 auto 34px}
+    .section-head .kicker{color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem}
+    h2.section-title{font-size:clamp(1.8rem,3.3vw,2.6rem);line-height:1.2;margin:8px 0 12px}
+    .section-head p{color:var(--muted)}
+    .stats{padding:24px 0;background:#fff}
+    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .stat{border:1px solid #e8ebee;border-radius:14px;padding:20px;text-align:center}
+    .stat strong{display:block;font-size:1.08rem;color:var(--green)}
+    .stat span{font-size:.88rem;color:var(--muted)}
+    .courses{background:var(--paper)}
+    .course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .course-card{background:#fff;padding:24px;border-radius:16px;border:1px solid #e8ebee;box-shadow:0 6px 20px #10182006;display:flex;flex-direction:column}
+    .course-icon{width:48px;height:48px;border-radius:13px;background:#fff0e2;display:grid;place-items:center;font-size:1.5rem;margin-bottom:15px}
+    .course-card h3{font-size:1.12rem;margin-bottom:8px}
+    .course-card p{color:var(--muted);font-size:.94rem;flex:1}
+    .course-card a{display:inline-block;color:var(--green);font-weight:800;margin-top:16px}
+    .course-card:hover{border-color:#ffb36f;transform:translateY(-3px);transition:.2s}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+    .about-panel{background:linear-gradient(135deg,#fff0e2,#e9f8ef);padding:32px;border-radius:22px}
+    .about-panel h3{font-size:1.6rem;margin-bottom:12px}
+    .check-list{list-style:none;display:grid;gap:12px;margin:20px 0}
+    .check-list li:before{content:"✓";display:inline-grid;place-items:center;background:#e4f6eb;color:var(--green);font-weight:900;width:25px;height:25px;border-radius:50%;margin-right:10px}
+    .muted{color:var(--muted)}
+    .feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}
+    .feature{padding:20px;border-radius:14px;border:1px solid #e8ebee}
+    .feature b{display:block;margin:7px 0}
+    .feature p{font-size:.9rem;color:var(--muted)}
+    .cta{background:var(--ink);color:#fff;padding:48px 0}
+    .cta-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .cta h2{font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.2;margin-bottom:8px}
+    .cta p{color:#d4dfe5}
+    .contact{background:var(--paper)}
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px}
+    .contact-info,.form-card{background:#fff;border:1px solid #e8ebee;border-radius:18px;padding:26px}
+    .contact-row{margin:20px 0}
+    .contact-row strong{display:block;margin-bottom:4px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    label{display:block;font-size:.9rem;font-weight:700;margin-bottom:6px}
+    input,select,textarea{width:100%;padding:12px;border:1px solid #d9dfe4;border-radius:9px;background:#fff;outline:none}
+    input:focus,select:focus,textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px #15944718}
+    .full{grid-column:1/-1}
+    .form-note{font-size:.83rem;color:var(--muted);margin-top:12px}
+    footer{background:#0b1116;color:#fff;padding:30px 0}
+    .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    footer p{color:#c2cbd1;font-size:.9rem}
+    .float-wa{position:fixed;right:18px;bottom:18px;z-index:20;background:#1ca45c;color:#fff;border-radius:50px;padding:13px 18px;font-weight:800;box-shadow:0 8px 24px #0003}
+    .notice{display:none;margin-top:12px;background:#e8f8ee;padding:12px;border-radius:8px;color:#126333}
+    @media(max-width:850px){
+      nav{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;padding:18px 4%;box-shadow:0 12px 15px #0001;flex-direction:column;align-items:flex-start}
+      nav.open{display:flex}.menu-btn{display:block}
+      .nav>.btn{display:none}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+      .hero{padding:56px 0}.hero-card{transform:none}.course-grid{grid-template-columns:repeat(2,1fr)}
+      .feature-grid{grid-template-columns:repeat(2,1fr)}.stats-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:540px){
+      section{padding:52px 0}.course-grid,.feature-grid,.form-grid{grid-template-columns:1fr}
+      .full{grid-column:auto}.cta-inner{align-items:flex-start;flex-direction:column}
+      .topbar .container{font-size:.8rem}.quick-list{gap:8px}.quick-item{padding:11px}
+    }
+  </style>
+</head>
+<body>
+  <!-- IMPORTANT: Replace the WhatsApp number in the script below with your active number, including country code. -->
+  <div class="topbar"><div class="container"><span>📍 Pandesara, Surat, Gujarat</span><span>Admissions Open • Learn Skills. Build Your Future.</span></div></div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Krishna Computer Education home">
+        <span class="logo-mark">KCE</span>
+        <span>Krishna Computer Education<small>PANDESARA • SURAT</small></span>
+      </a>
+      <nav id="navMenu" aria-label="Main navigation">
+        <a href="#home">Home</a><a href="#courses">Courses</a><a href="#about">About Us</a><a href="#why-us">Why Us</a><a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-orange" href="#contact">Enquire Now</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">🎓 ADMISSIONS OPEN</span>
+          <h1>Learn Practical Skills.<br><span>Build Your Future.</span></h1>
+          <p>Start learning computer and job-oriented skills with practical training, personal attention and supportive guidance at Krishna Computer Education, Pandesara, Surat.</p>
+          <div class="hero-actions">
+            <a class="btn btn-orange" href="#courses">Explore Courses →</a>
+            <a class="btn btn-dark" style="border:1px solid #ffffff70" href="#contact">Ask About Admission</a>
+          </div>
+          <p class="hero-note">For students, job seekers, office staff, business owners and beginners.</p>
+        </div>
+        <div class="hero-card">
+          <h2>Find the right course for you</h2>
+          <p>Build useful digital skills step by step, from computer basics to advanced applications.</p>
+          <div class="quick-list">
+            <div class="quick-item"><span>💻</span>Basic Computer</div>
+            <div class="quick-item"><span>📊</span>Advanced Excel</div>
+            <div class="quick-item"><span>🧾</span>Tally Prime + GST</div>
+            <div class="quick-item"><span>🎨</span>Graphic Design</div>
+          </div>
+          <a class="btn btn-orange" style="width:100%;margin-top:20px" href="#contact">Get Course Details</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats"><div class="container stats-grid">
+      <div class="stat"><strong>Practical Learning</strong><span>Learn by doing</span></div>
+      <div class="stat"><strong>Personal Attention</strong><span>Support for learners</span></div>
+      <div class="stat"><strong>Multiple Courses</strong><span>Skills for different goals</span></div>
+      <div class="stat"><strong>Pandesara, Surat</strong><span>Local training institute</span></div>
+    </div></div>
+
+    <section class="courses" id="courses">
+      <div class="container">
+        <div class="section-head"><span class="kicker">Our Courses</span><h2 class="section-title">Choose a Skill. Start Learning.</h2><p>Explore computer, accounting, design and modern digital skills. Contact us for syllabus, duration, fees and batch availability.</p></div>
+        <div class="course-grid">
+          <article class="course-card"><div class="course-icon">💻</div><h3>Basic Computer</h3><p>Computer fundamentals, Windows, file management, internet, email and everyday computer use.</p><a href="#contact" data-course="Basic Computer">Enquire about course →</a></article>
+          <article class="course-card"><div class="course-icon">📊</div><h3>Advanced Excel</h3><p>Formulas, functions, lookup tools, PivotTables, charts, reports and practical office tasks.</p><a href="#contact" data-course="Advanced Excel">Enquire about course →</a></article>
+          <article class="course-card"><div class="course-icon">🧾</div><h3>Tally Prime + GST</h3><p>Accounting fundamentals, vouchers, inventory, GST entries and practical reports.</p><a href="#contact" data-course="Tally Prime + GST">Enquire about course →</a></article>
+          <article class="course-card"><div class="course-icon">🎨</div><h3>Graphic Design</h3><p>Learn design fundamentals and create artwork using tools such as CorelDRAW, Photoshop and Canva.</p><a href="#contact" data-course="Graphic Design">Enquire about course →</a></article>
+          <article class="course-card"><div class="course-icon">🎓</div><h3>ADCA</h3><p>A computer applications program covering a range of office, accounting and digital skills. Ask for the current syllabus.</p><a href="#contact" data-course="ADCA">Enquire about course →</a></article>
+          <article class="course-card"><div class="course-icon">🤖</div><h3>AI Tools</h3><p>Explore practical AI tools for learning, productivity, content creation and everyday digital tasks.</p><a href="#contact" data-course="AI Tools">Enquire about course →</a></article>
+          <article class="course-card"><div class="course-icon">📣</div><h3>Digital Marketing</h3><p>Introduction to social media, content planning, online promotion and digital marketing basics.</p><a href="#contact" data-course="Digital Marketing">Enquire about course →</a></article>
+          <article class="course-card"><div class="course-icon">🌐</div><h3>Web Design & Coding</h3><p>Get introduced to websites, HTML, CSS and coding fundamentals through practice.</p><a href="#contact" data-course="Web Design & Coding">Enquire about course →</a></article>
+          <article class="course-card"><div class="course-icon">⌨️</div><h3>Typing & Other Courses</h3><p>Ask about English, Hindi and Gujarati typing, DCA, office skills and other available courses.</p><a href="#contact" data-course="Typing / Other Course">Enquire about course →</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div>
+          <span class="kicker" style="color:var(--green);font-weight:800;letter-spacing:.12em">ABOUT OUR INSTITUTE</span>
+          <h2 class="section-title" style="margin:10px 0 16px">Practical Computer Education for Everyday Goals</h2>
+          <p class="muted">Krishna Computer Education, located in Pandesara, Surat, aims to help learners develop useful computer and digital skills. Whether you are starting from the basics or want to improve your office, accounting or design skills, contact us to find a suitable course.</p>
+          <ul class="check-list">
+            <li>Practical-focused training</li><li>Guidance for beginners</li><li>Courses for different learning goals</li><li>Course details shared before admission</li>
+          </ul>
+          <a class="btn btn-orange" href="#contact">Talk to Us</a>
+        </div>
+        <div class="about-panel">
+          <h3>Your learning journey starts here.</h3>
+          <p>Learn at your pace, practise what you study and build confidence using computer applications.</p>
+          <div class="quick-list">
+            <div class="quick-item"><span>📘</span>Learn</div><div class="quick-item"><span>🖥️</span>Practise</div>
+            <div class="quick-item"><span>🧠</span>Improve</div><div class="quick-item"><span>🚀</span>Grow</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why-us" style="padding-top:0">
+      <div class="container">
+        <div class="section-head"><span class="kicker">Why Choose Us</span><h2 class="section-title">Learning That Focuses on You</h2><p>Our learning approach is designed to make computer education approachable and practical.</p></div>
+        <div class="feature-grid">
+          <div class="feature"><span>🖥️</span><b>Practical Training</b><p>Get opportunities to practise course topics.</p></div>
+          <div class="feature"><span>👩‍🏫</span><b>Personal Guidance</b><p>Ask questions and get help as you learn.</p></div>
+          <div class="feature"><span>👥</span><b>Supportive Learning</b><p>Build skills step by step.</p></div>
+          <div class="feature"><span>📜</span><b>Certificate Information</b><p>Ask the institute about course completion and certificate details.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-inner"><div><h2>Ready to learn a new skill?</h2><p>Contact Krishna Computer Education for course details and current admission availability.</p></div><a class="btn btn-orange" href="#contact">Enquire for Admission →</a></div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-head"><span class="kicker">Contact Us</span><h2 class="section-title">Let's Talk About Your Course</h2><p>Send an enquiry and we can open a pre-filled WhatsApp message for you.</p></div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>Krishna Computer Education</h3>
+            <p class="muted">Pandesara, Surat, Gujarat</p>
+            <div class="contact-row"><strong>📍 Institute Address</strong><span>1st Floor, Above JP Bakery, Piyush Point, Pandesara, Surat.</span></div>
+            <div class="contact-row"><strong>📞 Phone / WhatsApp</strong><span id="phoneText"></span></div>
+            <div class="contact-row"><strong>🕒 Class Timings</strong><span>Please contact us for current batch timings.</span></div>
+            <a class="btn btn-dark" id="directWhatsApp" href="#contact">Chat on WhatsApp</a>
+            <p class="form-note">Tip: Add your active phone number and check the address before publishing the website.</p>
+          </div>
+          <form class="form-card" id="enquiryForm">
+            <h3 style="margin-bottom:18px">Admission Enquiry Form</h3>
+            <div class="form-grid">
+              <div><label for="studentName">Student Name *</label><input id="studentName" name="studentName" required placeholder="Enter your name"></div>
+              <div><label for="studentPhone">Mobile Number *</label><input id="studentPhone" name="studentPhone" required type="tel" inputmode="numeric" pattern="[0-9+\-\s]{10,15}" placeholder="Enter mobile number"></div>
+              <div class="full"><label for="courseSelect">Select Course *</label><select id="courseSelect" name="course" required><option value="">Choose a course</option><option>Basic Computer</option><option>Advanced Excel</option><option>Tally Prime + GST</option><option>Graphic Design</option><option>ADCA</option><option>AI Tools</option><option>Digital Marketing</option><option>Web Design & Coding</option><option>Typing / Other Course</option></select></div>
+              <div class="full"><label for="message">Message (optional)</label><textarea id="message" name="message" rows="3" placeholder="Tell us what you would like to learn"></textarea></div>
+              <div class="full"><button class="btn btn-orange" type="submit" style="width:100%">Send Enquiry on WhatsApp →</button></div>
+            </div>
+            <div class="notice" id="formNotice" role="status"></div>
+            <p class="form-note">This demo form opens WhatsApp; it does not save enquiries to a database.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-inner"><div><strong>Krishna Computer Education</strong><p>Learn Skills. Build Your Future.</p></div><p>© <span id="year"></span> Krishna Computer Education. All rights reserved.</p></div></footer>
+  <a class="float-wa" id="floatingWhatsApp" href="#contact" aria-label="Contact us on WhatsApp">WhatsApp ↗</a>
+
+  <script>
+    /*
+      SETUP:
+      1. Replace WHATSAPP_NUMBER with your number including India country code 91.
+         Example format: "919876543210" (digits only; no +, spaces or hyphens).
+      2. Save this file as index.html.
+      3. Open index.html in your browser to test.
+    */
+    const WHATSAPP_NUMBER = "918347821294"; // Replace with your active WhatsApp number.
+    const navMenu = document.getElementById("navMenu");
+    const menuBtn = document.getElementById("menuBtn");
+
+    menuBtn.addEventListener("click", () => {
+      const opened = navMenu.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", String(opened));
+    });
+    navMenu.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+      navMenu.classList.remove("open");
+      menuBtn.setAttribute("aria-expanded", "false");
+    }));
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function validWhatsAppNumber() {
+      return /^91\d{10}$/.test(WHATSAPP_NUMBER);
+    }
+    function whatsappUrl(message) {
+      return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+    }
+    function setupWhatsApp() {
+      const ready = validWhatsAppNumber();
+      const phoneText = document.getElementById("phoneText");
+      const links = [
+        document.getElementById("directWhatsApp"),
+        document.getElementById("floatingWhatsApp")
+      ];
+      if (ready) {
+        phoneText.textContent = "+" + WHATSAPP_NUMBER;
+        links.forEach(link => link.href = whatsappUrl("Hello Krishna Computer Education, I would like to know about your courses and admissions."));
+      } else {
+        phoneText.textContent = "";
+        links.forEach(link => link.href = "#contact");
+      }
+    }
+    setupWhatsApp();
+
+    document.querySelectorAll("[data-course]").forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("courseSelect").value = link.dataset.course;
+      });
+    });
+
+    document.getElementById("enquiryForm").addEventListener("submit", event => {
+      event.preventDefault();
+      const name = document.getElementById("studentName").value.trim();
+      const phone = document.getElementById("studentPhone").value.trim();
+      const course = document.getElementById("courseSelect").value;
+      const message = document.getElementById("message").value.trim();
+      const notice = document.getElementById("formNotice");
+
+      if (!validWhatsAppNumber()) {
+        notice.style.display = "block";
+        notice.textContent = "Please add your active WhatsApp number in the code before using the enquiry form.";
+        return;
+      }
+      const text = `Hello Krishna Computer Education!\nI want to enquire about admission.\nName: ${name}\nMy Mobile: ${phone}\nCourse: ${course}\nMessage: ${message || "Please share course details, fees and timings."}`;
+      window.open(whatsappUrl(text), "_blank", "noopener,noreferrer");
+      notice.style.display = "block";
+      notice.textContent = "WhatsApp is opening with your enquiry. Please press Send in WhatsApp to submit it.";
+    });
+  </script>
+</body>
+</html>
